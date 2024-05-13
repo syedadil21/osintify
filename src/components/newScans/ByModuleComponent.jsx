@@ -41,7 +41,7 @@ const ByModuleComponent = () => {
             </div>
 
             <div className='flex flex-col w-[80%]'>
-                <p className='mt-2 '>Search Tor 'Ahmia' search engine for mentions of the target</p>
+                <p className='mt-2 '>Search Tor &apos;Ahmia&apos; search engine for mentions of the target</p>
             </div>
         </div>
     </>

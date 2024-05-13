@@ -28,7 +28,7 @@ const ByUseCaseComponent = () => {
 
             <div className='flex flex-col w-[85%]'>
                 <p className='font-semibold mb-2 mt-1'>Understand what information this target exposes to the internet.</p>
-                <p className='mb-4' >Gain an understanding about the target's network perimeter, associated identities and other information that is obtained through a lot of web crawling and search engine use.</p>
+                <p className='mb-4' >Gain an understanding about the target&apos;s network perimeter, associated identities and other information that is obtained through a lot of web crawling and search engine use.</p>
             </div>
         </div>
 
@@ -40,7 +40,7 @@ const ByUseCaseComponent = () => {
 
             <div className='flex flex-col w-[85%]'>
                 <p className='font-semibold mb-2 mt-1'>Best for when you suspect the target to be malicious but need more information.</p>
-                <p className='mb-4' >Some basic footprinting will be performed in addition to querying of blacklists and other sources that may have the information about your target's maliciousness</p>
+                <p className='mb-4' >Some basic footprinting will be performed in addition to querying of blacklists and other sources that may have the information about your target&apos;s maliciousness</p>
             </div>
         </div>
     </>

@@ -7,9 +7,7 @@ export default function NavbarComponent() {
   const router = useRouter();
   const path = usePathname();
 
-  useEffect(()=>{
-    console.log(path, "Path");
-  },[])
+
 
   return (
     <Navbar className="shadow-xl" isBordered>
