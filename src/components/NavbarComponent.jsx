@@ -17,19 +17,19 @@ export default function NavbarComponent() {
 
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem {...(path==="/features" ? {isActive:true} : {isActive:false})}>
-          <Link href="/features" color="foreground">
-            Features
+        <NavbarItem {...(path==="/newScans" ? {isActive:true} : {isActive:false})}>
+          <Link href="/newScans" color="foreground" aria-current="page">
+            New Scans
           </Link>
         </NavbarItem>
-        <NavbarItem {...(path==="/customers" ? {isActive:true} : {isActive:false})}>
-          <Link href="/customers" color="foreground" aria-current="page">
-            Customers
+        <NavbarItem  {...(path==="/scans" ? {isActive:true} : {isActive:false})}>
+          <Link color="foreground" href="/scans" >
+            Scans
           </Link>
         </NavbarItem>
-        <NavbarItem  {...(path==="/integrations" ? {isActive:true} : {isActive:false})}>
-          <Link color="foreground" href="/integrations" >
-            Integrations
+        <NavbarItem {...(path==="/settings" ? {isActive:true} : {isActive:false})}>
+          <Link href="/settings" color="foreground">
+            Settings
           </Link>
         </NavbarItem>
       </NavbarContent>
