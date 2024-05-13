@@ -17,22 +17,28 @@ const Main = () => {
                     <Input placeholder='Enter the target of the scan' label='Scan Target' className='my-2'/> 
                 </div>
 
-                <div className='w-[70%] p-3 bg-yellow-50 flex justify-between shadow-lg'>
-                    <div>
-                        <p><span className='font-bold'>Domain Name: </span> e.g. example.com</p>
-                        <p><span className='font-bold'>IPv4 Address: </span> e.g. 1.2.3.4</p>
-                        <p><span className='font-bold'>IPv6 Address: </span> e.g. 2040:47700:4700::1111</p>
-                        <p><span className='font-bold'>Hostname/Sub-domain: </span> e.g. abc.example.com</p>
-                        <p><span className='font-bold'>Subnet: </span> e.g. 1.2.3.0/24</p>
-                        <p><span className='font-bold'>Bitcoin Address: </span> e.g. 1HdawidnfeosDSads3feFEs45324</p>
-                    </div>
-                    
-                    <div>
-                        <p><span className='font-bold'>Email Address: </span> e.g. andy@example.com</p>
-                        <p><span className='font-bold'>Phone Number: </span> e.g. +1234577789</p>
-                        <p><span className='font-bold'>Human Name: </span> e.g. Syed Adil</p>
-                        <p><span className='font-bold'>Username: </span> e.g. syedadil21</p>
-                        <p><span className='font-bold'>Network ASN: </span> e.g. 1234</p>
+
+                <div className='flex flex-col w-[70%]'>
+
+                    <p className='ml-2 font-medium'>Following are a list of possible <span className='font-bold'>scan target</span> examples.</p>
+
+                    <div className=' p-3 bg-yellow-50 flex justify-between shadow-lg'>
+                        <div>
+                            <p><span className='font-bold'>Domain Name: </span> e.g. example.com</p>
+                            <p><span className='font-bold'>IPv4 Address: </span> e.g. 1.2.3.4</p>
+                            <p><span className='font-bold'>IPv6 Address: </span> e.g. 2040:47700:4700::1111</p>
+                            <p><span className='font-bold'>Hostname/Sub-domain: </span> e.g. abc.example.com</p>
+                            <p><span className='font-bold'>Subnet: </span> e.g. 1.2.3.0/24</p>
+                            <p><span className='font-bold'>Bitcoin Address: </span> e.g. 1HdawidnfeosDSads3feFEs45324</p>
+                        </div>
+                        
+                        <div>
+                            <p><span className='font-bold'>Email Address: </span> e.g. andy@example.com</p>
+                            <p><span className='font-bold'>Phone Number: </span> e.g. +1234577789</p>
+                            <p><span className='font-bold'>Human Name: </span> e.g. Syed Adil</p>
+                            <p><span className='font-bold'>Username: </span> e.g. syedadil21</p>
+                            <p><span className='font-bold'>Network ASN: </span> e.g. 1234</p>
+                        </div>
                     </div>
                 </div>
             </div>
