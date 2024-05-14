@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from "react";
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Link, Button} from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 
 const rows = [
   {
@@ -61,7 +62,8 @@ const columns = [
 ];
 
 export default function TableForScans() {
-  const [selectedKeys, setSelectedKeys] = useState(new Set(["2"]));
+    const router = useRouter();
+  const [selectedKeys, setSelectedKeys] = useState(new Set([]));
     const [openScan, setOpenScan] = useState(null);
   return (
     <Table 
@@ -77,7 +79,7 @@ export default function TableForScans() {
       <TableBody items={rows}>
         {(item) => (
           <TableRow key={item.key}>
-            {(columnKey) => (columnKey === "name" ? <TableCell className=""> <Button onPress={()=> setOpenScan(getKeyValue(item, columnKey))}> {getKeyValue(item, columnKey)}</Button></TableCell> : <TableCell>{getKeyValue(item, columnKey)}</TableCell>)}
+            {(columnKey) => (columnKey === "name" ? <TableCell className=""> <Button onPress={()=> router.push(`/openScan/${getKeyValue(item, columnKey)}`)}> {getKeyValue(item, columnKey)}</Button></TableCell> : <TableCell>{getKeyValue(item, columnKey)}</TableCell>)}
           </TableRow>
         )}
       </TableBody>
