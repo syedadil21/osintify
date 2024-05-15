@@ -26,11 +26,11 @@ export default function NavbarComponent() {
               Scans
             </Link>
           </NavbarItem>
-          <NavbarItem {...(path==="/settings" ? {isActive:true} : {isActive:false})}>
+          {/* <NavbarItem {...(path==="/settings" ? {isActive:true} : {isActive:false})}>
             <Link href="/settings" color="foreground">
               Settings
             </Link>
-          </NavbarItem>
+          </NavbarItem> */}
         </NavbarContent>
 
         <NavbarContent as="div" justify="end">
