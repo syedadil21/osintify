@@ -14,8 +14,8 @@ const dataset = [
   { "value": 41, "month": "Affiliate - Internet Name" },
   { "value": 100, "month": "Affiliate - Web Content" },
   { "value": 76, "month": "Account on External Site" },
-  { "value": 36, "month": "Bitcoin Address" },
-  { "value": 11, "month": "Bitcoin Balance" },
+  { "value": 36, "month": "Country Name" },
+  { "value": 11, "month": "City Name" },
   { "value": 9, "month": "Username" },
   { "value": 1, "month": "Portfolio" }
 ];

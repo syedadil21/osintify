@@ -29,7 +29,6 @@ const Main = () => {
                             <p><span className='font-bold'>IPv6 Address: </span> e.g. 2040:47700:4700::1111</p>
                             <p><span className='font-bold'>Hostname/Sub-domain: </span> e.g. abc.example.com</p>
                             <p><span className='font-bold'>Subnet: </span> e.g. 1.2.3.0/24</p>
-                            <p><span className='font-bold'>Bitcoin Address: </span> e.g. 1HdawidnfeosDSads3feFEs45324</p>
                         </div>
                         
                         <div>

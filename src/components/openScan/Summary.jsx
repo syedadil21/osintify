@@ -6,7 +6,7 @@ const Summary = () => {
   return (
     <>
         <div className='w-full flex flex-col'>
-            <div className='w-full my-5'>
+            <div className='w-full my-3'>
                 <div className='flex justify-evenly'>
                     <div className='flex items-center'>
                         <p className='mx-2'>Total:</p>

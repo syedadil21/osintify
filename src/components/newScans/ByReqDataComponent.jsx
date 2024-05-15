@@ -52,12 +52,12 @@ const ByReqDataComponent = () => {
         <div className='w-full bg-blue-50 flex justify-start my-5'>
             <div className='flex w-[40%] p-5 items-center'>   
                 <Input width={1} className='w-10 mr-3' type='checkbox' size='sm'/>
-                <p>Bitcoin Address</p>
+                <p>Country Name</p>
             </div>
             
             <div className='flex w-[40%] p-5 items-center'>   
                 <Input width={1} className='w-10 mr-3' type='checkbox' size='sm'/>
-                <p>Bitcoin Balance</p>
+                <p>City Name</p>
             </div>
         </div>
         

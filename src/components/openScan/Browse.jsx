@@ -1,9 +1,9 @@
-import React from 'react'
+import TableForDataModules from "./TableForDataModules"
 
 const Browse = () => {
   return (
     <div>
-      Browse
+      <TableForDataModules/>
     </div>
   )
 }
