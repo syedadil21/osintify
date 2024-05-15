@@ -52,9 +52,9 @@ const Main = () => {
     }
   return (
     <>
-        <div className='w-full h-screen bg-blue-100 p-10 flex justify-center items-center'>
+        <div className='w-full h-screen bg-gray-600 p-10 flex justify-center items-center'>
             {!signUpScreenShow && <div className='w-full h-screen flex justify-center items-center'>
-                <div className='loginCard bg-white w-4/12 flex rounded-xl shadow-xl flex-col items-center py-10'>
+                <div className='loginCard bg-gray-800 w-4/12 flex rounded-xl shadow-2xl flex-col items-center py-10'>
                     <h1 className='text-5xl font-extralight my-10'>Login Form</h1>
                     <Input value={email} onChange={(e)=>setEmail(e.target.value)} type='email' placeholder='Enter your email' label='Email' className='w-[70%] mt-5'/>
                     <Input value={password} onChange={(e)=>setPassword(e.target.value)} type='password' placeholder='Enter your password' label='Password' className='w-[70%] my-5'/>
@@ -64,7 +64,7 @@ const Main = () => {
             </div>}
 
             {signUpScreenShow && <div className='w-full h-screen flex justify-center items-center'>
-                <div className='loginCard bg-white w-4/12 flex rounded-xl shadow-xl flex-col items-center py-10'>
+                <div className='loginCard bg-gray-800 w-4/12 flex rounded-xl shadow-2xl flex-col items-center py-10'>
                     <h1 className='text-5xl font-extralight my-10'>Signup Form</h1>
                     <Input value={email} onChange={(e)=>setEmail(e.target.value)} type='email' placeholder='Enter your email' label='Email' className='w-[70%] mt-5'/>
                     <Input value={password} onChange={(e)=>setPassword(e.target.value)} type='password' placeholder='Enter your password' label='Password' className='w-[70%] my-5'/>
