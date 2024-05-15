@@ -7,7 +7,7 @@ import Browse from './Browse'
 const Main = ({slug}) => {
   return (
     <>
-        <div className='p-16 flex flex-col w-full'>
+        <div className='p-16 flex flex-col w-full h-screen'>
             <div className='flex items-center'>
                 <h1 className='text-4xl font-semibold mr-3'>{slug}</h1>
                 <Chip color='primary'>Running</Chip>

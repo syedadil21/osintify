@@ -22,7 +22,7 @@ const Main = () => {
 
                     <p className='ml-2 font-medium'>Following are a list of possible <span className='font-bold'>scan target</span> examples.</p>
 
-                    <div className=' p-3 bg-yellow-50 flex justify-between shadow-lg'>
+                    <div className=' p-3 bg-gray-800 rounded-2xl flex justify-between shadow-lg'>
                         <div>
                             <p><span className='font-bold'>Domain Name: </span> e.g. example.com</p>
                             <p><span className='font-bold'>IPv4 Address: </span> e.g. 1.2.3.4</p>

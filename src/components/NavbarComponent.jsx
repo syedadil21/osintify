@@ -11,7 +11,7 @@ export default function NavbarComponent() {
 
   return (
     <>
-      {path !=='/' && <Navbar className="shadow-xl" isBordered>
+      {path !=='/' && <Navbar className="shadow-xl dark text-foreground " isBordered>
         <NavbarBrand>
 
         </NavbarBrand>

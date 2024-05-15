@@ -8,7 +8,7 @@ const ByUseCaseComponent = () => {
 
   return (
     <>
-        <div className='bg-blue-50 w-full flex justify-between my-2'>
+        <div className='bg-gray-800 rounded-2xl w-full flex justify-between my-2'>
             <div className='flex items-start '>
                 <Input type='radio' name='list' value={currentValueRadio} onChange={(e) => {setCurrentValueRadio(e.target.value)}}/>
                 <p className='mx-3 my-2' onClick={()=>{console.log(currentValueRadio);}}>All</p>
@@ -20,7 +20,7 @@ const ByUseCaseComponent = () => {
             </div>
         </div>
 
-        <div className='bg-blue-50 w-full flex justify-between my-2'>
+        <div className='bg-gray-800 rounded-2xl w-full flex justify-between my-2'>
             <div className='flex items-start '>
                 <Input type='radio' name='list' value={currentValueRadio} onChange={(e) => {setCurrentValueRadio(e.target.value)}}/>
                 <p className='mx-3 my-2'>Footprint</p>
@@ -32,7 +32,7 @@ const ByUseCaseComponent = () => {
             </div>
         </div>
 
-        <div className='bg-blue-50 w-full flex justify-between my-2'>
+        <div className='bg-gray-800 rounded-2xl w-full flex justify-between my-2'>
             <div className='flex items-start'>
                 <Input type='radio' name='list' value={currentValueRadio} onChange={(e) => {setCurrentValueRadio(e.target.value)}}/>
                 <p className='mx-3 my-2'>Investigate</p>

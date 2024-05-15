@@ -4,7 +4,7 @@ import React from 'react'
 const ByReqDataComponent = () => {
   return (
     <>
-        <div className='w-full bg-blue-50 flex justify-start my-5'>
+        <div className='w-full bg-gray-800 rounded-2xl flex justify-start my-5'>
             <div className='flex w-[40%] p-5 items-center'>   
                 <Input width={1} className='w-10 mr-3' type='checkbox' size='sm'/>
                 <p>Account on External Site</p>
@@ -16,7 +16,7 @@ const ByReqDataComponent = () => {
             </div>
         </div>
 
-        <div className='w-full bg-blue-50 flex justify-start my-5'>
+        <div className='w-full bg-gray-800 rounded-2xl flex justify-start my-5'>
             <div className='flex w-[40%] p-5 items-center'>   
                 <Input width={1} className='w-10 mr-3' type='checkbox' size='sm'/>
                 <p>Affiliate - Domain Name</p>
@@ -27,7 +27,7 @@ const ByReqDataComponent = () => {
                 <p>Affiliate - Email Address</p>
             </div>
         </div>
-        <div className='w-full bg-blue-50 flex justify-start my-5'>
+        <div className='w-full bg-gray-800 rounded-2xl flex justify-start my-5'>
             <div className='flex w-[40%] p-5 items-center'>   
                 <Input width={1} className='w-10 mr-3' type='checkbox' size='sm'/>
                 <p>Affiliate - IP Address</p>
@@ -38,7 +38,7 @@ const ByReqDataComponent = () => {
                 <p>Affiliate - IPv6 Address</p>
             </div>
         </div>
-        <div className='w-full bg-blue-50 flex justify-start my-5'>
+        <div className='w-full bg-gray-800 rounded-2xl flex justify-start my-5'>
             <div className='flex w-[40%] p-5 items-center'>   
                 <Input width={1} className='w-10 mr-3' type='checkbox' size='sm'/>
                 <p>Affiliate - Internet Name</p>
@@ -49,7 +49,7 @@ const ByReqDataComponent = () => {
                 <p>Affiliate - Web Content</p>
             </div>
         </div>
-        <div className='w-full bg-blue-50 flex justify-start my-5'>
+        <div className='w-full bg-gray-800 rounded-2xl flex justify-start my-5'>
             <div className='flex w-[40%] p-5 items-center'>   
                 <Input width={1} className='w-10 mr-3' type='checkbox' size='sm'/>
                 <p>Country Name</p>

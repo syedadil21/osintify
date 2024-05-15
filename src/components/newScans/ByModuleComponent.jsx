@@ -4,7 +4,7 @@ import { Input } from '@nextui-org/react'
 const ByModuleComponent = () => {
   return (
     <>
-        <div className='bg-blue-50 w-full flex justify-between my-2'>
+        <div className='bg-gray-800 rounded-2xl w-full flex justify-between my-2'>
             <div className='flex items-start '>
                 <Input type='checkbox' name='checkbox' />
                 <p className='mx-3 my-2'>AbstractAPI</p>
@@ -14,7 +14,7 @@ const ByModuleComponent = () => {
                 <p className='mt-2 '>Look up domain, phone and IP address information from AbstractAPI</p>
             </div>
         </div>
-        <div className='bg-blue-50 w-full flex justify-between my-2'>
+        <div className='bg-gray-800 rounded-2xl w-full flex justify-between my-2'>
             <div className='flex items-start '>
                 <Input type='checkbox' name='checkbox' />
                 <p className='mx-3 my-2'>abuse.ch</p>
@@ -24,7 +24,7 @@ const ByModuleComponent = () => {
                 <p className='mt-2 '>Check if host/domain, IP address or netblock is malicious according to Abuse.ch</p>
             </div>
         </div>
-        <div className='bg-blue-50 w-full flex justify-between my-2'>
+        <div className='bg-gray-800 rounded-2xl w-full flex justify-between my-2'>
             <div className='flex items-start '>
                 <Input type='checkbox' name='checkbox' />
                 <p className='mx-3 my-2'>AccountFinder</p>
@@ -34,7 +34,7 @@ const ByModuleComponent = () => {
                 <p className='mt-2 '>Look for possible associated accounts on nearly 200 websites like Ebay, Slashdot, reddit, etc.</p>
             </div>
         </div>
-        <div className='bg-blue-50 w-full flex justify-between my-2'>
+        <div className='bg-gray-800 rounded-2xl w-full flex justify-between my-2'>
             <div className='flex items-start '>
                 <Input type='checkbox' name='checkbox' />
                 <p className='mx-3 my-2'>Ahmia</p>

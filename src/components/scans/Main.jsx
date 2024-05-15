@@ -4,7 +4,7 @@ import TableForScans from './TableForScans'
 const Main = () => {
   return (
     <>
-        <div className='p-16'>
+        <div className='p-16 h-screen'>
             <h1 className='text-4xl font-semibold'>Scans</h1>
             <TableForScans/>
         </div>
