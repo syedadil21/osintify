@@ -1,7 +1,8 @@
 'use client'
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Dropdown, DropdownItem, DropdownMenu, DropdownSection, DropdownTrigger} from "@nextui-org/react";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect } from "react";
+import osintifyLogo from '../assets/osintifyLogo.png'
 
 export default function NavbarComponent() {
   const router = useRouter();
@@ -13,7 +14,7 @@ export default function NavbarComponent() {
     <>
       {path !=='/' && <Navbar className="shadow-xl dark text-foreground " isBordered>
         <NavbarBrand>
-
+          <Image src={osintifyLogo} width={250} alt="Logo"/>
         </NavbarBrand>
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
           <NavbarItem {...(path==="/newScans" ? {isActive:true} : {isActive:false})}>

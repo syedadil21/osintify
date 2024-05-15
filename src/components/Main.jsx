@@ -1,8 +1,10 @@
 'use client'
 import { Button, Input } from '@nextui-org/react'
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react'
 import toast from 'react-hot-toast';
+import osintifyLogo from '../assets/osintifyLogo.png'
 
 const Main = () => {
     const [email, setEmail] = useState();
@@ -52,7 +54,8 @@ const Main = () => {
     }
   return (
     <>
-        <div className='w-full h-screen bg-gray-600 p-10 flex justify-center items-center'>
+        <div className='w-full h-screen bg-gray-600 p-10 flex flex-col justify-center items-center'>
+            <Image src={osintifyLogo} width={300} alt='Logo'/>
             {!signUpScreenShow && <div className='w-full h-screen flex justify-center items-center'>
                 <div className='loginCard bg-gray-800 w-4/12 flex rounded-xl shadow-2xl flex-col items-center py-10'>
                     <h1 className='text-5xl font-extralight my-10'>Login Form</h1>
