@@ -3,11 +3,13 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Dropdown, 
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import osintifyLogo from '../assets/osintifyLogo.png'
+import { supabase } from "@/config/Supabase";
 
-export default function NavbarComponent() {
+export default function NavbarComponent({session}) {
   const router = useRouter();
   const path = usePathname();
 
+console.log(session, 'session');
 
 
   return (
@@ -42,7 +44,7 @@ export default function NavbarComponent() {
             <DropdownMenu aria-label="Profile Actions" variant="flat">
               <DropdownItem key="profile" className="h-14 gap-2">
                 <p className="font-semibold">Signed in as</p>
-                <p className="font-semibold">test1@gmail.com</p>
+                <p className="font-semibold">{session?.user?.email}</p>
               </DropdownItem>
               <DropdownItem key="lea">Law enforcement agency</DropdownItem>
               <DropdownItem key="pi">Private Investigator</DropdownItem>
@@ -53,7 +55,10 @@ export default function NavbarComponent() {
               <DropdownItem key="system">System</DropdownItem>
               <DropdownItem key="configurations">Configurations</DropdownItem>
               <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem> */}
-              <DropdownItem key="logout" color="danger" onPress={()=> router.push('/')}>
+              <DropdownItem key="logout" color="danger" onPress={async()=> {
+                const { error } = await supabase.auth.signOut()
+                router.push('/')
+                }}>
                 Log Out
               </DropdownItem>
             </DropdownMenu>

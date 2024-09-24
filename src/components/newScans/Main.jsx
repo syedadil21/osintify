@@ -46,7 +46,7 @@ const Main = () => {
 
 
                 <Tabs key='underlined' variant="underlined" aria-label="Tabs variants">
-                    <Tab key="ByUseCase" title="By Use Case">
+                    {/* <Tab key="ByUseCase" title="By Use Case">
                         <div className='px-5'>
                             <ByUseCaseComponent/>
                         </div>
@@ -55,7 +55,7 @@ const Main = () => {
                         <div className='px-5'>
                             <ByReqDataComponent/>
                         </div>
-                    </Tab>
+                    </Tab> */}
                     <Tab key="ByModule" title="By Module">
                         <div className='px-5'>
                             <ByModuleComponent/>
