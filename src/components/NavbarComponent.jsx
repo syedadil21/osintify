@@ -9,9 +9,6 @@ export default function NavbarComponent({session}) {
   const router = useRouter();
   const path = usePathname();
 
-console.log(session, 'session');
-
-
   return (
     <>
       {path !=='/' && <Navbar className="shadow-xl dark text-foreground " isBordered>
