@@ -6,6 +6,8 @@ import ByModuleComponent from './ByModuleComponent'
 import toast from 'react-hot-toast'
 import { useState } from 'react'
 import dehashed from '@/api/dehashed'
+import blackbird from '@/api/blackbird'
+import whatsmyname from '@/api/whatsmyname'
 
 
 const Main = () => {
@@ -17,7 +19,9 @@ const Main = () => {
         if(scanName && scanTarget)
         {
             toast("Starting")
-            await dehashed()
+            // await dehashed(scanTarget)
+            // await blackbird(scanTarget, "email")
+            await whatsmyname(scanTarget)
             
             toast.success("Scan created")
         }  
