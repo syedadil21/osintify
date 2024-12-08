@@ -3,18 +3,39 @@ import { Button, Input, Tab, Tabs } from '@nextui-org/react'
 import ByUseCaseComponent from './ByUseCaseComponent'
 import ByReqDataComponent from './ByReqDataComponent'
 import ByModuleComponent from './ByModuleComponent'
+import toast from 'react-hot-toast'
+import { useState } from 'react'
+import dehashed from '@/api/dehashed'
 
 
 const Main = () => {
+    
+    const [scanName, setScanName] = useState("")
+    const [scanTarget, setScanTarget] = useState("")
+    
+    const runScan = async () => {
+        if(scanName && scanTarget)
+        {
+            toast("Starting")
+            await dehashed()
+            
+            toast.success("Scan created")
+        }  
+        else
+        {
+            toast.error("Please enter both, Scan name and Scan target ")
+        }
+    }
+    
   return (
-    <div className='p-16 w-full'>
+    <div className='px-16 w-full'>
       <h1 className='text-4xl font-semibold'>New Scans</h1>
         <div className='main section w-full flex flex-col'>
             
             <div className='flex justify-between my-10'>
-                <div className='Inupts flex flex-col justify-around'>
-                    <Input placeholder='Enter the name of the scan' label='Scan Name' className='my-2'/> 
-                    <Input placeholder='Enter the target of the scan' label='Scan Target' className='my-2'/> 
+                  <div className='Inupts flex flex-col justify-around flex-1 px-10'>
+                    <Input value={scanName} onChange={(e)=>setScanName(e.target.value)} placeholder='Enter the name of the scan' label='Scan Name' className='my-2'/> 
+                    <Input value={scanTarget} onChange={(e)=>setScanTarget(e.target.value)} placeholder='Enter the target of the scan' label='Scan Target' className='my-2'/> 
                 </div>
 
 
@@ -26,17 +47,17 @@ const Main = () => {
                         <div>
                             <p><span className='font-bold'>Domain Name: </span> e.g. example.com</p>
                             <p><span className='font-bold'>IPv4 Address: </span> e.g. 1.2.3.4</p>
-                            <p><span className='font-bold'>IPv6 Address: </span> e.g. 2040:47700:4700::1111</p>
-                            <p><span className='font-bold'>Hostname/Sub-domain: </span> e.g. abc.example.com</p>
-                            <p><span className='font-bold'>Subnet: </span> e.g. 1.2.3.0/24</p>
+                            {/* <p><span className='font-bold'>IPv6 Address: </span> e.g. 2040:47700:4700::1111</p> */}
+                            {/* <p><span className='font-bold'>Hostname/Sub-domain: </span> e.g. abc.example.com</p> */}
+                            <p><span className='font-bold'>Username: </span> e.g. syedadil21</p>
                         </div>
                         
                         <div>
                             <p><span className='font-bold'>Email Address: </span> e.g. andy@example.com</p>
                             <p><span className='font-bold'>Phone Number: </span> e.g. +1234577789</p>
-                            <p><span className='font-bold'>Human Name: </span> e.g. Syed Adil</p>
-                            <p><span className='font-bold'>Username: </span> e.g. syedadil21</p>
-                            <p><span className='font-bold'>Network ASN: </span> e.g. 1234</p>
+                            {/* <p><span className='font-bold'>Subnet: </span> e.g. 1.2.3.0/24</p> */}
+                            {/* <p><span className='font-bold'>Human Name: </span> e.g. Syed Adil</p> */}
+                            {/* <p><span className='font-bold'>Network ASN: </span> e.g. 1234</p> */}
                         </div>
                     </div>
                 </div>
@@ -50,12 +71,12 @@ const Main = () => {
                         <div className='px-5'>
                             <ByUseCaseComponent/>
                         </div>
-                    </Tab>
+                    </Tab> */}
                     <Tab key="ByReqData" title="By Required Data">
                         <div className='px-5'>
                             <ByReqDataComponent/>
                         </div>
-                    </Tab> */}
+                    </Tab>
                     <Tab key="ByModule" title="By Module">
                         <div className='px-5'>
                             <ByModuleComponent/>
@@ -66,7 +87,7 @@ const Main = () => {
             </div>
 
             <div>
-                <Button color='success' className='text-white'>Run Scan Now</Button>
+                <Button color='success' className='text-white' onPress={runScan}>Run Scan Now</Button>
             </div>
 
         </div>

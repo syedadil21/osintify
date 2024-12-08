@@ -9,6 +9,36 @@ const ByModuleComponent = () => {
             <div className='bg-gray-800 rounded-2xl w-full flex justify-between my-2'>
                 <div className='flex items-start '>
                     <Input type='radio' name='list' value={currentValueRadio} onChange={(e) => { setCurrentValueRadio(e.target.value) }} />
+                    <p className='mx-3 my-2'>Dehashed</p>
+                </div>
+
+                <div className='flex flex-col w-[80%]'>
+                    <p className='mt-2 '>Look up domain, phone and IP address information from AbstractAPI</p>
+                </div>
+            </div>
+            <div className='bg-gray-800 rounded-2xl w-full flex justify-between my-2'>
+                <div className='flex items-start '>
+                    <Input type='radio' name='list' value={currentValueRadio} onChange={(e) => { setCurrentValueRadio(e.target.value) }} />
+                    <p className='mx-3 my-2'>WhatsMyName</p>
+                </div>
+
+                <div className='flex flex-col w-[80%]'>
+                    <p className='mt-2 '>Look up domain, phone and IP address information from AbstractAPI</p>
+                </div>
+            </div>
+            <div className='bg-gray-800 rounded-2xl w-full flex justify-between my-2'>
+                <div className='flex items-start '>
+                    <Input type='radio' name='list' value={currentValueRadio} onChange={(e) => { setCurrentValueRadio(e.target.value) }} />
+                    <p className='mx-3 my-2'>BlackBird</p>
+                </div>
+
+                <div className='flex flex-col w-[80%]'>
+                    <p className='mt-2 '>Look up domain, phone and IP address information from AbstractAPI</p>
+                </div>
+            </div>
+            {/* <div className='bg-gray-800 rounded-2xl w-full flex justify-between my-2'>
+                <div className='flex items-start '>
+                    <Input type='radio' name='list' value={currentValueRadio} onChange={(e) => { setCurrentValueRadio(e.target.value) }} />
                     <p className='mx-3 my-2'>AbstractAPI</p>
                 </div>
 
@@ -45,7 +75,7 @@ const ByModuleComponent = () => {
                 <div className='flex flex-col w-[80%]'>
                     <p className='mt-2 '>Search Tor &apos;Ahmia&apos; search engine for mentions of the target</p>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }
