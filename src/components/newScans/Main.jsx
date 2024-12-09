@@ -8,7 +8,7 @@ import { useState } from 'react'
 import dehashed from '@/api/dehashed'
 import blackbird from '@/api/blackbird'
 import whatsmyname from '@/api/whatsmyname'
-import { supabase } from '@/config/Supabase'
+import { addScan, getScans, supabase } from '@/config/Supabase'
 
 
 const Main = () => {
@@ -16,29 +16,16 @@ const Main = () => {
     const [scanName, setScanName] = useState("")
     const [scanTarget, setScanTarget] = useState("")
     
-    const runScan = async () => {
-        const { data: userData, error: userError } = await supabase.auth.getUser()
-        if(userError)
-        {
-            toast.error(userError.message)
-            return;
-        }
-        console.log(userData.user.id)
-        let { data: Scans, error } = await supabase
-            .from('Scans')
-            .select('*')
-            .eq("user_id", userData.user.id)
-        console.log("Scans", Scans);
+    const runScan = async () => {        
         
-        return;
         if(scanName && scanTarget)
         {
             toast("Starting")
-            // await dehashed(scanTarget)
-            // await blackbird(scanTarget, "email")
-            await whatsmyname(scanTarget)
-            
-            toast.success("Scan created")
+            // await dehashed(scanName, scanTarget)
+            // await blackbird(scanName, scanTarget, "email")
+            // await whatsmyname(scanName, scanTarget)
+            console.log(await getScans())
+            // toast.success("Scan created")
         }  
         else
         {
