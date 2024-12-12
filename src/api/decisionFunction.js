@@ -18,26 +18,26 @@ async function decisionFunction(currentTab, scanTarget, reqData, selectedModule,
     {
         if (domain ==="email")
         {
-            dehashedResponse = await dehashed(scanTarget, "email");
+            dehashedResponse = await dehashed(scanTarget, "email", reqData);
             blackbirdResponse = await blackbird(scanTarget, "email");
         }
         else if (domain ==="username")
         {
-            dehashedResponse = await dehashed(scanTarget, "username");
+            dehashedResponse = await dehashed(scanTarget, "username", reqData);
             blackbirdResponse = await blackbird(scanTarget, "username");
         }
         else if (domain ==="ipaddress")
         {
-            dehashedResponse = await dehashed(scanTarget, "ip_address");
+            dehashedResponse = await dehashed(scanTarget, "ip_address", reqData);
             antitorResponse = await antitor(scanTarget)
         }
         else if (domain === "phonenumber")
         {
-            siminfoResponse = await siminfo(scanTarget)
+            siminfoResponse = await siminfo(scanTarget, reqData)
         }
         else if (domain === "cnic")
         {
-            siminfoResponse = await siminfo(scanTarget)
+            siminfoResponse = await siminfo(scanTarget, reqData)
         }
         else if (domain === "domain")
         {
