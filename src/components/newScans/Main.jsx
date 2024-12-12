@@ -142,7 +142,7 @@ const Main = () => {
                 </div>
 
                 <div className='TabsSection'>
-                    {currentTab}
+                    {/* {currentTab} */}
                     <Tabs key='underlined' selectedKey={currentTab} onSelectionChange={setCurrentTab} onChange={(e)=>{
                         setDomain('')
                         setReqData('all')
