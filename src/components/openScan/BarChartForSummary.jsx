@@ -8,7 +8,6 @@ import { axisClasses } from '@mui/x-charts/ChartsAxis';
 const dataset = [
   { "value": 0, "month": "antitor" },
   { "value": 0, "month": "blackbird" },
-  { "value": 0, "month": "blockchain" },
   { "value": 0, "month": "dehashed" },
   { "value": 0, "month": "hunterio" },
   { "value": 0, "month": "siminfo" },

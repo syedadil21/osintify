@@ -21,7 +21,6 @@ const Summary = ({scan}) => {
             ]);
             setScansForGraph([
                 { "month": "antitor", "value": scan?.result?.antitor?.length },
-                { "month": "blackbird", "value": scan?.result?.blackbird?.length },
                 { "month": "blockchain", "value": scan?.result?.blockchain?.length },
                 { "month": "dehashed", "value": scan?.result?.dehashed?.length },
                 { "month": "hunterio", "value": scan?.result?.hunterio?.length },
@@ -37,7 +36,7 @@ const Summary = ({scan}) => {
                 <div className='flex justify-evenly'>
                     <div className='flex items-center'>
                         <p className='mx-2'>Total:</p>
-                        <Chip>6</Chip>
+                        <Chip>5</Chip>
                     </div>
                     {/* <div className='flex items-center'>
                         <p className='mx-2'>Unique:</p>
