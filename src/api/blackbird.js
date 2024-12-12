@@ -3,7 +3,7 @@ import axios from 'axios';
 import React from 'react'
 import toast from 'react-hot-toast';
 
-async function blackbird(scanName, scanTarget, query) {
+async function blackbird(scanTarget, query) {
     try {
         const requestOptions = {
             method: "GET",
@@ -11,14 +11,15 @@ async function blackbird(scanName, scanTarget, query) {
         };
 
         const response = await fetch(`http://127.0.0.1:5000/blackbird?key=${query}&value=${scanTarget}`, requestOptions)
-        const data = await response.text();
-        console.log(data);
+        const data = await response.json();
+        console.log({blackbird: data.foundAccounts});
+        return { blackbird: data.foundAccounts }
         
-        const scanAdded = await addScan(scanName, scanTarget, data)
-        if (scanAdded) {
-            toast.success("Scan Completed")
-            console.log(scanAdded);
-        }
+        // const scanAdded = await addScan(scanName, scanTarget, data)
+        // if (scanAdded) {
+        //     toast.success("Scan Completed")
+        //     console.log(scanAdded);
+        // }
 
     } catch (error) {
         console.log(error);

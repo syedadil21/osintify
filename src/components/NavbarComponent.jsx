@@ -36,16 +36,16 @@ export default function NavbarComponent({session}) {
         <NavbarContent as="div" justify="end">
           <Dropdown placement="bottom-end">
             <DropdownTrigger>
-              <Button>Role</Button>
+              <Button>Menu</Button>
             </DropdownTrigger>
             <DropdownMenu aria-label="Profile Actions" variant="flat">
               <DropdownItem key="profile" className="h-14 gap-2">
                 <p className="font-semibold">Signed in as</p>
                 <p className="font-semibold">{session?.user?.email}</p>
               </DropdownItem>
-              <DropdownItem key="lea">Law enforcement agency</DropdownItem>
+              {/* <DropdownItem key="lea">Law enforcement agency</DropdownItem>
               <DropdownItem key="pi">Private Investigator</DropdownItem>
-              <DropdownItem key="pu">Personal use</DropdownItem>
+              <DropdownItem key="pu">Personal use</DropdownItem> */}
               {/* <DropdownItem key="settings">My Settings</DropdownItem>
               <DropdownItem key="team_settings">Team Settings</DropdownItem>
               <DropdownItem key="analytics">Analytics</DropdownItem>

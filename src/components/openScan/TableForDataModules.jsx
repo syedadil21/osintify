@@ -40,19 +40,20 @@ const columns = [
     key: "ude",
     label: "Unique Data Elements",
   },
-  {
-    key: "tde",
-    label: "Total Data Elements",
-  },
-  {
-    key: "lde",
-    label: "Last Data Element",
-  },
+  // {
+  //   key: "tde",
+  //   label: "Total Data Elements",
+  // },
+  // {
+  //   key: "lde",
+  //   label: "Last Data Element",
+  // },
 ];
 
-export default function TableForDataModules() {
+export default function TableForDataModules({scan}) {
     const router = useRouter();
     return (
+      <>
     <Table 
       aria-label="Controlled table example with dynamic content"
       className="my-10"
@@ -61,12 +62,32 @@ export default function TableForDataModules() {
         {(column) => <TableColumn key={column.key} onClick={()=>{console.log(selectedKeys);}}>{column.label}</TableColumn>}
       </TableHeader>
       <TableBody items={rows}>
-        {(item) => (
+        {/* {(item) => (
           <TableRow key={item.key}>
             {(columnKey) => (<TableCell>{getKeyValue(item, columnKey)}</TableCell>)}
           </TableRow>
-        )}
+        )} */}
+          <TableRow>
+            <TableCell>Antitor: </TableCell>
+              <TableCell>{scan?.result?.antitor}</TableCell>
+            <TableCell>Here</TableCell>
+            <TableCell>Here</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>I</TableCell>
+            <TableCell>I</TableCell>
+            <TableCell>I</TableCell>
+            <TableCell>I</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Am</TableCell>
+            <TableCell>Am</TableCell>
+            <TableCell>Am</TableCell>
+            <TableCell>Am</TableCell>
+          </TableRow>
       </TableBody>
     </Table>
+    
+      </>
   );
 }

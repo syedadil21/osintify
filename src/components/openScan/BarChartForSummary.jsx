@@ -6,18 +6,23 @@ import { axisClasses } from '@mui/x-charts/ChartsAxis';
 
 
 const dataset = [
-  { "value": 0, "month": "Affiliate - Company Name" },
-  { "value": 2, "month": "Affiliate - Domain Name" },
-  { "value": 6, "month": "Affiliate - Email Address" },
-  { "value": 17, "month": "Affiliate - IP Address" },
-  { "value": 26, "month": "Affiliate - IPv6 Address" },
-  { "value": 41, "month": "Affiliate - Internet Name" },
-  { "value": 100, "month": "Affiliate - Web Content" },
-  { "value": 76, "month": "Account on External Site" },
-  { "value": 36, "month": "Country Name" },
-  { "value": 11, "month": "City Name" },
-  { "value": 9, "month": "Username" },
-  { "value": 1, "month": "Portfolio" }
+  { "value": 0, "month": "antitor" },
+  { "value": 0, "month": "blackbird" },
+  { "value": 0, "month": "blockchain" },
+  { "value": 0, "month": "dehashed" },
+  { "value": 0, "month": "hunterio" },
+  { "value": 0, "month": "siminfo" },
+  // { "value": 2, "month": "Affiliate - Domain Name" },
+  // { "value": 6, "month": "Affiliate - Email Address" },
+  // { "value": 17, "month": "Affiliate - IP Address" },
+  // { "value": 26, "month": "Aff    iliate - IPv6 Address" },
+  // { "value": 41, "month": "Affiliate - Internet Name" },
+  // { "value": 5, "month": "Affiliate - Web Content" },
+  // { "value": 76, "month": "Account on External Site" },
+  // { "value": 36, "month": "Country Name" },
+  // { "value": 11, "month": "City Name" },
+  // { "value": 9, "month": "Username" },
+  // { "value": 1, "month": "Portfolio" }
 ];
 
 
@@ -26,10 +31,10 @@ const valueFormatter = (value) => `${value}%`;
 const chartSetting = {
   yAxis: [
     {
-      label: 'Percentage of unique elements',
+      label: 'Percentage of Values Found',
     },
   ],
-  series: [{ dataKey: 'value', label: 'Unique Elements', valueFormatter }],
+  series: [{ dataKey: 'value', label: 'Values Found', valueFormatter }],
   height: 300,
   sx: {
     [`& .${axisClasses.directionY} .${axisClasses.label}`]: {
@@ -38,7 +43,7 @@ const chartSetting = {
   },
 };
 
-export default function BarChartForSummary() {
+export default function BarChartForSummary({scan}) {
   const [tickPlacement, setTickPlacement] = React.useState('middle');
   const [tickLabelPlacement, setTickLabelPlacement] = React.useState('middle');
 
@@ -51,7 +56,7 @@ export default function BarChartForSummary() {
         setTickLabelPlacement={setTickLabelPlacement}
       /> */}
       <BarChart
-        dataset={dataset}
+        dataset={scan ? scan : dataset}
         xAxis={[
           { scaleType: 'band', dataKey: 'month', tickPlacement, tickLabelPlacement },
         ]}
