@@ -69,11 +69,11 @@ export default function TableForDataModules({ scan }) {
         )} */}
           <TableRow>
             <TableCell>Antitor: </TableCell>
-            <TableCell>{JSON.stringify(scan?.result?.antitor)}</TableCell>
+            <TableCell>{JSON.stringify(scan?.result?.antitor?.map(item => ({"Movie name": item.name}) ))}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>Blackbird: </TableCell>
-            <TableCell>{JSON.stringify(scan?.result?.blackbird.map(item => [item.category, item.name]))}</TableCell>
+            <TableCell>{JSON.stringify(scan?.result?.blackbird.map(item => (item.category, item.name)))}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>Blockchain: </TableCell>

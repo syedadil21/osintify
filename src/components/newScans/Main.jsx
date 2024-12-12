@@ -75,7 +75,7 @@ const Main = () => {
         else if (selectedModule === "blockchain")
             return ["domain", "cnic", "phonenumber", "ipaddress", "email", "username"]
         else if (selectedModule === "antitor")
-            return ["blockchain", "cnic", "phonenumber", "ipaddress", "email", "username"]
+            return ["blockchain", "cnic", "phonenumber", "domain", "email", "username"]
 
         
     }
@@ -124,7 +124,7 @@ const Main = () => {
                         <div className=' p-3 bg-gray-800 rounded-2xl flex justify-between shadow-lg'>
                             <div>
                                 <p><span className='font-bold'>Domain Name: </span> e.g. example.com</p>
-                                <p><span className='font-bold'>IPv4 Address: </span> e.g. 1.2.3.4</p>
+                                <p><span className='font-bold'>IPv4 Address: </span> e.g. 119.73.97.230</p>
                                 {/* <p><span className='font-bold'>IPv6 Address: </span> e.g. 2040:47700:4700::1111</p> */}
                                 {/* <p><span className='font-bold'>Hostname/Sub-domain: </span> e.g. abc.example.com</p> */}
                                 <p><span className='font-bold'>Username: </span> e.g. syedadil21</p>

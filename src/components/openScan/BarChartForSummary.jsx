@@ -25,7 +25,7 @@ const dataset = [
 ];
 
 
-const valueFormatter = (value) => `${value}%`;
+const valueFormatter = (value) => `${value}`;
 
 const chartSetting = {
   yAxis: [
