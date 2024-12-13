@@ -1,0 +1,41 @@
+Dehashed (input)- email, ip_address, username and any other data points.
+Output - id, email, ip_address, username, password, hashed_password, hash_type, name, vin, address, phone, database_name.
+
+
+Blackbird (input)- username, email
+Output - "category": "social",
+            "metadata": null,
+            "name": "kik",
+            "status": "FOUND",
+            "url": "https://kik.me/syed_adil21"
+
+
+
+whatsmyname (input) - username - optional
+Output - [
+        "freelancer",
+        "https://www.freelancer.com/u/syedadil21"
+    	],
+
+
+
+siminfo (input) - phone number, cnic
+Output - {
+        "Address": "Shara E Sanaiyah Yanbu Saudi A",
+        "CNIC": "4210161856444",
+        "Mobile #": "3322254233",
+        "Name": "Manal Abid",
+        "Operator": "Ufone"
+    },
+
+
+
+Hunter.io (input) - domain
+Output - 
+
+
+
+Blockchain.info (input) - bitcoin address
+
+antitor (input) - ip address
+output
