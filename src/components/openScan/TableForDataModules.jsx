@@ -73,7 +73,7 @@ export default function TableForDataModules({ scan }) {
           </TableRow>
           <TableRow>
             <TableCell>Blackbird: </TableCell>
-            <TableCell>{JSON.stringify(scan?.result?.blackbird.map(item => (item.category, item.name)))}</TableCell>
+            <TableCell>{JSON.stringify(scan?.result?.blackbird?.map(item => (item.category, item.name)))}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>Blockchain: </TableCell>
@@ -83,7 +83,7 @@ export default function TableForDataModules({ scan }) {
           <TableRow>
             <TableCell>Dehashed: </TableCell>
             {/* <TableCell>{JSON.stringify(scan?.result?.dehashed)}</TableCell> */}
-            <TableCell>{JSON.stringify(scan?.result?.dehashed.map(item => [{ "email": item.email ? item.email : '-' }, { "ip_address": item.ip_address ? item.ip_address : '-' }, { "username": item.username ? item.username : '-' }, { "password": item.password ? item.password : '-' }, { "name": item.name ? item.name : '-' }, { "database_name": item.database_name ? item.database_name : '-' }]))}</TableCell>
+            <TableCell>{JSON.stringify(scan?.result?.dehashed?.map(item => [{ "email": item.email ? item.email : '-' }, { "ip_address": item.ip_address ? item.ip_address : '-' }, { "username": item.username ? item.username : '-' }, { "password": item.password ? item.password : '-' }, { "name": item.name ? item.name : '-' }, { "database_name": item.database_name ? item.database_name : '-' }]))}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>Hunterio: </TableCell>
